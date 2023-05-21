@@ -1,5 +1,5 @@
 /*
-Apresentando os comandos básicos para criação de uma tabela
+ -- Apresentando comandos básicos para utilização no Oracle
 */
 
 --Criando uma tabela
