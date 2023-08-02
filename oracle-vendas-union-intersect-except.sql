@@ -27,8 +27,7 @@ BEGIN
 END;
 /
 
-SELECT * FROM tbl_produtos;
-
+--SELECT * FROM tbl_produtos;
 
 DECLARE
    dt_start DATE := SYSDATE - 30;
