@@ -1,3 +1,4 @@
+--Comandos salvos conforme foi a execução em sala
 CREATE TABLE tbl_funcoes_PF1793(
    id_funcao INTEGER PRIMARY KEY,--NOT NULL INDICE UNICO
    --PRIMARY KEY (id_funcao, ....)
