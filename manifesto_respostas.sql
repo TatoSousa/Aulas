@@ -3,10 +3,24 @@ ALTER TABLE tbl_voo_passageiro_RMxxxx MODIFY id PRIMARY KEY;
 ALTER TABLE tbl_voo_passageiro_RMxxxx ADD ( PRIMARY KEY (id) );
 ALTER TABLE tbl_voo_passageiro_RMxxxx MODIFY id CONSTRAINT PK_COD_CLIENTE PRIMARY KEY;
 
+ALTER TABLE tbl_aeronave_RMxxxx MODIFY matricula_aeronave PRIMARY KEY;
+ALTER TABLE tbl_carga_RMxxxx MODIFY identificacao_carga PRIMARY KEY;
+ALTER TABLE tbl_passageiro_RMxxxx MODIFY numero_passageiro PRIMARY KEY;
+ALTER TABLE tbl_tripulante_RMxxxx MODIFY numero_tripulante PRIMARY KEY;
+ALTER TABLE tbl_voo_carga_RMxxxx MODIFY id PRIMARY KEY;
+ALTER TABLE tbl_voo_passageiro_RMxxxx MODIFY id PRIMARY KEY;
+ALTER TABLE tbl_voo_tripulante_RMxxxx MODIFY id PRIMARY KEY;
+ALTER TABLE tbl_voo_RMxxxx MODIFY nr_voo PRIMARY KEY;
+
 --Adicione todas as chave estrangeiras (FOREIGN KEYS ou Chave de referência)
-ALTER TABLE tbl_voo_RMxxxx
-  ADD CONSTRAINT fk_aeronave_voo
-      FOREIGN KEY(matricula_aeronave) REFERENCES tbl_aeronave_RMxxxx(matricula_aeronave);
+ALTER TABLE tbl_voo_RMxxxx ADD CONSTRAINT fk_aeronave_voo FOREIGN KEY(matricula_aeronave) REFERENCES tbl_aeronave_RMxxxx(matricula_aeronave);
+ALTER TABLE tbl_voo_passageiro_RMxxxx ADD CONSTRAINT fk_passageiro_voo FOREIGN KEY(numero_passageiro) REFERENCES tbl_passageiro_RMxxxx(numero_passageiro);
+ALTER TABLE tbl_voo_passageiro_RMxxxx ADD CONSTRAINT fk_passageiro_nr_voo FOREIGN KEY(nr_voo) REFERENCES tbl_voo_RMxxxx(nr_voo);
+ALTER TABLE tbl_voo_tripulante_RMxxxx ADD CONSTRAINT fk_tripulante_voo FOREIGN KEY(numero_tripulante) REFERENCES tbl_tripulante_RMxxxx(numero_tripulante);
+ALTER TABLE tbl_voo_tripulante_RMxxxx ADD CONSTRAINT fk_tripulante_nr_voo FOREIGN KEY(nr_voo) REFERENCES tbl_voo_RMxxxx(nr_voo);
+ALTER TABLE tbl_voo_carga_RMxxxx ADD CONSTRAINT fk_carga_nr_voo FOREIGN KEY(nr_voo) REFERENCES tbl_voo_RMxxxx(nr_voo);
+ALTER TABLE tbl_voo_carga_RMxxxx ADD CONSTRAINT fk_identificacao_carga_nr_voo FOREIGN KEY(nr_voo) REFERENCES tbl_voo_carga_RMxxxx(nr_voo);
+
 
 -- Adicione uma chave de verificação (CHECK) para o ano de fabricação da aeronave maior que 2000;
 ALTER TABLE tbl_aeronave_RMxxxx ADD CONSTRAINT ck_aeronave_ano CHECK(ano_fabricacao > 2000);
