@@ -1,4 +1,4 @@
-# Banco de Dados Relacionais
+# Banco de dados relacionais
 Abaixo está o link com os principais comandos que foram utilizados na aula de **Bancos de dados relacionais**
 
 ## Link das documentações completas
