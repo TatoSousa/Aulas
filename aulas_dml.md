@@ -84,6 +84,10 @@ Usamos o DROP para apagar a estrutura completa (registros e estrutura), TRUNCATE
 
 <details>
   <summary>Quando podemos usar o  MERGE no banco de dados?</summary>
-  Podemos usar o `MERGE` em atualizações de preços, atualização da listagem de produtos em caso de atualização de preços e/ou adicionar novos registros ao mesmo tempo. Ou seja, as possibilidades são enormes quando precisamos executar dois ou mais comandos DML na mesma transação.
+  Podemos usar o ´MERGE´ em atualizações de preços, atualização da listagem de produtos em caso de atualização de preços e/ou adicionar novos registros ao mesmo tempo. Ou seja, as possibilidades são enormes quando precisamos executar dois ou mais comandos DML na mesma transação.
 </details>
 
+<details>
+  <summary>Qual a vantagem de usar o MERGE?</summary>
+  Podemos dizer que a maior vantagem em usar o comando ´MERGE´ é a reutilização de códigos e logo em seguida a vantagem de usar uma única transação para executar as operações envolvidas.
+</details>
