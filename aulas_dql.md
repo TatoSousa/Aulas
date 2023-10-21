@@ -16,9 +16,7 @@ Um exemplo que podemos claramente executar com um comando de SELECT utilizando a
 - Venda média mensal/semanal/diária por categoria de produtos;
 - etc
 
-
 ## Junções (JOIN)
-
 Quando você pesquisa por JOIN, facilmente você irá encontrar diversos "sabores" como: LEFT, RIGHT, INNER, CROSS, NATURAL, entre diversos outros.
 Praticamente o comando JOIN existe para satisfazer alguma necessidade de usar o relacionamento entre as tabelas (aquele mesmo que você define nos MER/DER).
 Explicando de uma forma prática você tem que tratar como criar um JOIN, vamos seguir as instruções abaixo:
@@ -47,7 +45,6 @@ Caso você utilize LEFT, RIGHT, FULL todos os atributos que não forem localizad
 ![JOINS mais populares](https://github.com/TatoSousa/Aulas/blob/main/images/dml-selet-join.png)
 
 **Modelos de SELECT com JOIN**
-
 ```sql
 -- Inner join
     SELECT nome, nome_estado
@@ -77,7 +74,6 @@ ORDER BY nome_estado, nome;
 Em consultas com mais de um JOIN, deverá seguir a regra da tabela que está com a informação que você precisa "buscar" será será a tabela da direita.
 
 ## União, Intersecção e Excessão
-
 Copiando a regra de conjuntos utilizadas na matemática podemos executá-la em instruções que precisamos buscar informações similares em diversos pontos do nosso banco de dados:
 Vou chamar o resultado dos SELECTs de conjunto para melhorar o entendimento:
 
@@ -104,7 +100,6 @@ SELECT nome, cpf FROM clientes_empresa_y;
 ```
 
 ## SUB-SELECT/SUB-CONSULTAS
-
 Em alguns momentos o SELECT começa a ficar muito complexo, quando isso acontece devemos melhorar o processo de forma que fique mais legivel, reduzindo a manutenção podemos usar sub-consultas.
 
 EXEMPLO: No seu e-commerce você tem alguns procutos classificados como produto estrela, sendo que essa lista pode ser alterada a qualquer momento, então podemos utilizar uma consulta com estes produtos no filtro de outros relatórios:
@@ -113,15 +108,11 @@ EXEMPLO: No seu e-commerce você tem alguns procutos classificados como produto 
 SELECT produto_id, descricao, total_vendas
 FROM vendas
 INNER JOIN produtos ON vendas.produto_id = produtos.produto_id
-WHERE vendas.produto_id IN (SELECT produto_id FROM produtos_estrelas);
+WHERE vendas.produto_id IN (SELECT produto_id FROM produtos_estrela);
+--Caso o subselect retorne vazio este código vai ocorrer o erro porquê na condição IN estará vazia.
 ```
 
-Esta consulta poderia ser resolvida com outro JOIN, porém temos que pensar em dois casos Manutenção e Desempenho.
-
-
-
-
-
+Esta consulta poderia ser resolvida com outro JOIN, porém temos que pensar em dois casos Manutenção e Desempenho. 
 
 
 <a href="https://github.com/TatoSousa/Aulas">Voltar para a página principal do repositório</a></br>
