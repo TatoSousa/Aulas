@@ -91,6 +91,7 @@ CREATE TABLE tbl_funcionarios(
    status         VARCHAR(8) DEFAULT 'ATIVO' CHECK ('ATIVO', 'INATIVO', 'AFASTADO'),
    uf             CHAR(2) NOT NULL,
    cpf            VARCHAR(11),
+   salario        DECIMAL(10,2) DEFAULT 0,
    CONSTRAINT tbl_funcionarios_pk    PRIMARY KEY (id_funcionario),
    CONSTRAINT tbl_funcionarios_uf_fk FOREIGN KEY (uf) REFERENCES tbl_estados(uf)
 );
