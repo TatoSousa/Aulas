@@ -9,3 +9,5 @@ Abaixo está o link com os principais comandos que foram utilizados na aula de *
 <a href="https://www.postgresql.org/docs/current/ddl.html">PostgreSQL</a></br>
 <a href="https://learn.microsoft.com/pt-br/sql/sql-server/?view=sql-server-ver16">SQL Server</a></br>
 
+## Aulas por assunto
+<a href="https://github.com/TatoSousa/Aulas/blob/main/Aulas-DDL.md">Data Definition Language - DDL</a></br>
