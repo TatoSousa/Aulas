@@ -34,6 +34,12 @@ INNER JOIN tbl_estados  ON tbl_funcionarios.uf = tbl_estados.uf
 ORDER BY nome_estado, nome;
 ```
 
+No exemplo acima somente retornará os registros que existem nas duas tabelas (INNER), mas se quisermos retornar todos os registros da tabela tbl_funcionarios, indenpendente se tem ou não relacionamento na tabela tbl_estados, utilizamos o LEFT. Lembrando oque foi dito acima, a tabela principal está no FROM.
+
+Existe caso que precisamos retornar todos os registros da tabela que está no JOIN (direita), neste caso utilizamos o RIGHT.
+
+Você pode encontrar definições do LEFT e JOIN, utilizando a descrição LEFT OUTER ou RIGHT OUTER, em ambos os casos a execução é o mesmo.
+
 
 ![JOINS mais populares](https://github.com/TatoSousa/Aulas/blob/main/images/dml-selet-join.png)
 
