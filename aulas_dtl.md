@@ -13,13 +13,12 @@ Durabilidade, todos as transações concluídas com sucesso serão armazenadas n
 
 Também chamamos estas características pelo acronimo ACID.
 
-
-<a href="https://github.com/TatoSousa/Aulas/blob/main/Aulas-DDL.md#criando-tabelas">Criando tabelas</a></br>
-<a href="https://github.com/TatoSousa/Aulas/blob/main/Aulas-DDL.md#alterando-eou-modificando-tabelas">Alterando tabelas</a></br>
-<a href="https://github.com/TatoSousa/Aulas/blob/main/Aulas-DDL.md#apagando-as-tabelas">Apagando</a></br>
-<a href="https://github.com/TatoSousa/Aulas/blob/main/Aulas-DDL.md#limpando-uma-tabelas">Limpando</a></br>
-<a href="https://github.com/TatoSousa/Aulas/blob/main/Aulas-DDL.md#exemplo-completo">Exemplo</a></br>
-<a href="https://github.com/TatoSousa/Aulas/blob/main/Aulas-DDL.md#perguntas-e-respostas">Perguntas e respostas</a></br>
+<a href="https://github.com/TatoSousa/Aulas/blob/main/aulas_dtl.md#iniciando">Inciando (SET TRANSACTION, BEGIN)</a></br>
+<a href="https://github.com/TatoSousa/Aulas/blob/main/aulas_dtl.md#gravando">Gravando (BEGIN)</a></br>
+<a href="https://github.com/TatoSousa/Aulas/blob/main/aulas_dtl.md#pontos-de-salvamento">Pontos de Salvamento (SAVEPOINT)</a></br>
+<a href="https://github.com/TatoSousa/Aulas/blob/main/aulas_dtl.md#cancelando">Cancelando (ROLLBACK)</a></br>
+<a href="https://github.com/TatoSousa/Aulas/blob/main/aulas_dtl.md#exemplo-completo">Exemplo</a></br>
+<a href="https://github.com/TatoSousa/Aulas/blob/main/aulas_dtl.md#perguntas-e-respostas">Perguntas e respostas</a></br>
 
 <a href="https://github.com/TatoSousa/Aulas">Voltar para a página principal do repositório</a></br>
 
