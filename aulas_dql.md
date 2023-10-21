@@ -40,6 +40,9 @@ Existe caso que precisamos retornar todos os registros da tabela que está no JO
 
 Você pode encontrar definições do LEFT e JOIN, utilizando a descrição LEFT OUTER ou RIGHT OUTER, em ambos os casos a execução é o mesmo.
 
+Agora se o objetivo for retornar todos os registros de ambas as tabelas você precisará usar o FULL INNER JOIN, neste caso irá retornar todos os registros de ambas as tabelas envolvidas.
+
+Caso você utilize LEFT, RIGHT, FULL todos os atributos que não forem localizados serão retornados como NULO. Abaixo uma forma visual dos JOIN apresentados.
 
 ![JOINS mais populares](https://github.com/TatoSousa/Aulas/blob/main/images/dml-selet-join.png)
 
