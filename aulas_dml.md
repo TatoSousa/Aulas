@@ -6,7 +6,7 @@ A sintaxe destes comandos tendem a ser de fácil compreensão facilitando o seu 
 
 Mas porque repositório? Neste momento estamos somente armazenando as informações que geramos em nossa aplicação, sem a abstração adequada para gerar conhecimento ou inteligência para o nosso cliente, porém com essa informação bem estrutura em nossa base de dados é possível identificar pontos interessantes para a tomada de decisão, exemplo:
 
-O cadastro de vendas é somente a representação das vendas que ocorreram durante um determinado período, assim a tabela terá milhões de registros no decorrer do tempo. Esta é a principal função dos comandos DML. Após este armazenamento, precisamos adicionar inteligência que ser podemos adicionar com a geração de consultas onde iremos aprender com os comandos da Linguagem de consulta de dados - DQL;
+O cadastro de vendas é somente a representação das vendas que ocorreram durante um determinado período, assim a tabela terá milhões de registros no decorrer do tempo. Esta é a principal função dos comandos DML. Após este armazenamento, precisamos adicionar inteligência que ser podemos adicionar com a geração de consultas onde iremos aprender com os comandos da <a href="https://github.com/TatoSousa/Aulas/blob/main/aulas_dql.md">Linguagem de consulta de dados - DQL</a>;
 
 Abaixo está uma representação basica de cada comando pertencente ao grupo de DML.
 
