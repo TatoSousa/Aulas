@@ -101,7 +101,27 @@ SELECT nome, cpf FROM clientes_empresa_x EXCEPT
 SELECT nome, cpf FROM clientes_empresa_y;
 
 --EXCEPT em alguns bancos de dados pode ser o comando MINUS
-
 ```
+
+## SUB-SELECT/SUB-CONSULTAS
+
+Em alguns momentos o SELECT começa a ficar muito complexo, quando isso acontece devemos melhorar o processo de forma que fique mais legivel, reduzindo a manutenção podemos usar sub-consultas.
+
+EXEMPLO: No seu e-commerce você tem alguns procutos classificados como produto estrela, sendo que essa lista pode ser alterada a qualquer momento, então podemos utilizar uma consulta com estes produtos no filtro de outros relatórios:
+
+```sql
+SELECT produto_id, descricao, total_vendas
+FROM vendas
+INNER JOIN produtos ON vendas.produto_id = produtos.produto_id
+WHERE vendas.produto_id IN (SELECT produto_id FROM produtos_estrelas);
+```
+
+Esta consulta poderia ser resolvida com outro JOIN, porém temos que pensar em dois casos Manutenção e Desempenho.
+
+
+
+
+
+
 
 <a href="https://github.com/TatoSousa/Aulas">Voltar para a página principal do repositório</a></br>
