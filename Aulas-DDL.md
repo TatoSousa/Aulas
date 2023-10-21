@@ -3,12 +3,12 @@ Após elaborar os diagramas (DER/MER) é necessário que convertamos para o diag
 
 Todos os comandos presentes nesta categoria,são executados imediatamente ou seja não é possível retornar caso execute a limpeza de uma tabela ou exclusão de alguma coluna. Caso isso ocorra será necessário restaurar o backup.
 
-<a href="https://github.com/TatoSousa/Aulas/edit/main/Aulas-DDL.md#criando-tabelas">Criando tabelas</a></br>
-<a href="https://github.com/TatoSousa/Aulas/edit/main/Aulas-DDL.md#alterando-eou-modificando-tabelas">Alterando tabelas</a></br>
-<a href="https://github.com/TatoSousa/Aulas/edit/main/Aulas-DDL.md#apagando-as-tabelas">Apagando</a></br>
-<a href="https://github.com/TatoSousa/Aulas/edit/main/Aulas-DDL.md#limpando-uma-tabelas">Limpando</a></br>
-<a href="https://github.com/TatoSousa/Aulas/edit/main/Aulas-DDL.md#exemplo-completo">Exemplo</a></br>
-<a href="https://github.com/TatoSousa/Aulas/edit/main/Aulas-DDL.md#perguntas-e-respostas">Perguntas e respostas</a></br>
+<a href="https://github.com/TatoSousa/Aulas/blob/main/Aulas-DDL.md#criando-tabelas">Criando tabelas</a></br>
+<a href="https://github.com/TatoSousa/Aulas/blob/main/Aulas-DDL.md#alterando-eou-modificando-tabelas">Alterando tabelas</a></br>
+<a href="https://github.com/TatoSousa/Aulas/blob/main/Aulas-DDL.md#apagando-as-tabelas">Apagando</a></br>
+<a href="https://github.com/TatoSousa/Aulas/blob/main/Aulas-DDL.md#limpando-uma-tabelas">Limpando</a></br>
+<a href="https://github.com/TatoSousa/Aulas/blob/main/Aulas-DDL.md#exemplo-completo">Exemplo</a></br>
+<a href="https://github.com/TatoSousa/Aulas/blob/main/Aulas-DDL.md#perguntas-e-respostas">Perguntas e respostas</a></br>
 
 <a href="https://github.com/TatoSousa/Aulas">Voltar para a página principal do repositório</a></br>
 
