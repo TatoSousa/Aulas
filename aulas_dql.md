@@ -76,7 +76,7 @@ ORDER BY nome_estado, nome;
 
 Em consultas com mais de um JOIN, deverá seguir a regra da tabela que está com a informação que você precisa "buscar" será será a tabela da direita.
 
-## União (JOIN)
+## União, Intersecção e Excessão
 
 Copiando a regra de conjuntos utilizadas na matemática podemos executá-la em instruções que precisamos buscar informações similares em diversos pontos do nosso banco de dados:
 Vou chamar o resultado dos SELECTs de conjunto para melhorar o entendimento:
