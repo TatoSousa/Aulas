@@ -85,3 +85,13 @@ Quando gravamos ou atualizamos um registro em banco de dados, chamamos de persis
 - Falta de Energia;
 - Falhas prevista pelo programador
 </details>
+
+<details>
+  <summary>Podemos executar comando DDL dentro de um bloco de comandos?</summary>
+Não, comandos DDL são executados implicitamente pelo banco de dados, por este motivo não é possível executar em um bloco de comandos.
+</details>
+
+<details>
+  <summary>Em que momento uma transação fica disponível para todos os usuário no banco de dados?</summary>
+Após a realização do comando COMMIT, a transação ficará disponível para todos os usuários, antes desse comando a informação estará disponível somente na sessão que originou a transação. Ou seja, antes do comando COMMIT a informação estará somente em memória.
+</details>
