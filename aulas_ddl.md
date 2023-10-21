@@ -1,7 +1,9 @@
 ## DDL - Linguagem de definição de dados
 Após elaborar os diagramas (DER/MER) é necessário que convertamos para o diagrama fisico, complementando o que foi apresentado nas aulas, abaixo podemos identificar alguns modelos de scripts para os principais comandos utilizados.
 
-Todos os comandos presentes nesta categoria,são executados imediatamente ou seja não é possível retornar caso execute a limpeza de uma tabela ou exclusão de alguma coluna. Caso isso ocorra será necessário restaurar o backup.
+Estes comandos são responsáveis por realizar a modificações na estrutura física do banco de dados. Em qualquer treinamento/ou curso é comum tratar estes comandos somente com tabelas, porém eles são utilizados para trabalhar com Usuários, Views, Procedures, Functions, entre outros recursos disponíveis no banco de dados em questão, então pesquise sobre estes comandos e veja as possibilidades disponíveis aumentando assim o seu  conhecimento em banco de dados.
+
+Todos os comandos presentes nesta categoria, são executados imediatamente ou seja não é possível retornar caso execute a limpeza de uma tabela ou exclusão de alguma coluna. Caso isso ocorra será necessário restaurar o backup.
 
 <a href="https://github.com/TatoSousa/Aulas/blob/main/Aulas-DDL.md#criando-tabelas">Criando tabelas</a></br>
 <a href="https://github.com/TatoSousa/Aulas/blob/main/Aulas-DDL.md#alterando-eou-modificando-tabelas">Alterando tabelas</a></br>
