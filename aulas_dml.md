@@ -51,54 +51,39 @@ WHERE tbl_funcionarios_promovidos.id_funcionario = tbl_funcionarios.id_funcionar
 UPDATE tbl_funcionarios SET salario = salario * 1.1
 WHERE id_funcionario IN (SELECT id_funcionario
                            FROM tbl_funcionarios_promovidos.id_funcionario);
-
 ```
 
 ### Excluindo
 ```sql
+--excluindo todos os funcionarios inativos
+DELETE FROM tbl_funcionarios WHERE status = 'INATIVO';
+
 ```
 
 ### Mesclando
 ```sql
+--Atualizando um resumo de vendas
+MERGE INTO destino target
+USING origem source --neste ponto pode ser uma tabela, view, sub-select
+ON (target.id_produto = source.id_produto)
+WHEN MATCHED THEN --Encontrou
+UPDATE SET qtde_vendas = source.qtde_vendas, dt_update = current_timestamp
+WHEN NOT MATCHED THEN -- Nao Encontrou
+INSERT (id_produto, qtde_vendas) VALUES (source.id_produto, source.qtde_
 ```
 
 ### Perguntas e respostas
 <details>
-  <summary>Oque é autocommit?</summary>
-  Os bancos de dados relacionais possuem a configuração de autocommit (geralmente ativadas), isso indica que a cada comando enviado para o banco de dados será persistido o comando.</br>
-  É possível alterar essa configuração, porém isso não é aconselhável, pois dependerá de fatores externos onde todos os comandos devem possuir o COMMIT ou ROLLBACK no seu final, ficando todo o processo em memória.
+  <summary>Porque a utilização do WHERE é tão importante</summary>
+  Quando executamos o comando UPDATE e DELETE devemos informar quais são as condições do registro que deve ser persistido,  caso não informarmos essa cláusula indica que iremos alterar (ou apagar) todos os registros da tabela em questão. Neste caso pode gerar uma quantidade enorme de incosistências.</details>
+
+<details>
+  <summary>Qual a diferença entre DROP, TRUNCATE e DELETE?</summary>
+Usamos o DROP para apagar a estrutura completa (registros e estrutura), TRUNCATE quando precisamos limpar uma tabela por completo, sem atualizar os indices que foram criados, DELETE para apagar registros especificos da tabela, atualizando os indices e melhorando o desempenho após a sua execução.
 </details>
 
 <details>
-  <summary>Oque significa ACID?</summary>
-ACID é o acronimo para as seguintes características: Atomicidade, Consistência, Isolamento e Durabilidade.
+  <summary>Quando podemos usar o  MERGE no banco de dados?</summary>
+  Podemos usar o `MERGE` em atualizações de preços, atualização da listagem de produtos em caso de atualização de preços e/ou adicionar novos registros ao mesmo tempo. Ou seja, as possibilidades são enormes quando precisamos executar dois ou mais comandos DML na mesma transação.
 </details>
 
-<details>
-  <summary>Por que falamos que um registro deve ser atomico na base de dados?</summary>
-Quando falamos de algo atomico em banco de dados significa que é um registro unico dentro da base de dados, ou seja, não possui nenhum valor igual a ele.
-</details>
-
-<details>
-  <summary>Como definir persistência em banco de dados?</summary>
-Quando gravamos ou atualizamos um registro em banco de dados, chamamos de persistência das informações na base de dados.
-</details>
-
-<details>
-  <summary>Quais tipos de falhas podem cancelar uma transação?</summary>
-- Falha de Hardware, Software e/ou rede;
-- Erro durante a execução de operação na transação;
-- Excessões detectadas pela transação, que necessitam o cancelamento;
-- Falta de Energia;
-- Falhas prevista pelo programador
-</details>
-
-<details>
-  <summary>Podemos executar comando DDL dentro de um bloco de comandos?</summary>
-Não, comandos DDL são executados implicitamente pelo banco de dados, por este motivo não é possível executar em um bloco de comandos.
-</details>
-
-<details>
-  <summary>Em que momento uma transação fica disponível para todos os usuário no banco de dados?</summary>
-Após a realização do comando COMMIT, a transação ficará disponível para todos os usuários, antes desse comando a informação estará disponível somente na sessão que originou a transação. Ou seja, antes do comando COMMIT a informação estará somente em memória.
-</details>
