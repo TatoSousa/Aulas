@@ -21,7 +21,24 @@ Um exemplo que podemos claramente executar com um comando de SELECT utilizando a
 
 Quando você pesquisa por JOIN, facilmente você irá encontrar diversos "sabores" como: LEFT, RIGHT, INNER, CROSS, NATURAL, entre diversos outros.
 Praticamente o comando JOIN existe para satisfazer alguma necessidade de usar o relacionamento entre as tabelas (aquele mesmo que você define nos MER/DER).
-Explicando de uma forma prática você tem que tratar como 
+Explicando de uma forma prática você tem que tratar como criar um JOIN, vamos seguir as instruções abaixo:
+
+JOINs sempre estará relacionado a duas tabelas então quando estamos com um join "simples" (Somente duas tabelas), podemos dizer que a tabela principal (a esquerda) sempre será a tabela que está no FROM do comando SELECT, então a tabela que está a direita sempre estará no JOIN.
+
+Então para localizar o nome do estado que o funcionário pertence o código será esse:
+
+```sql
+    SELECT nome, nome_estado
+      FROM tbl_funcionarios
+INNER JOIN tbl_estados  ON tbl_funcionarios.uf = tbl_estados.uf
+ORDER BY nome_estado, nome;
+```
+
+
+![JOINS mais populares](https://github.com/TatoSousa/Aulas/blob/main/images/dml-selet-join.png)
+
+
+
 
 <a href="https://github.com/TatoSousa/Aulas/blob/main/Aulas-DDL.md#criando-tabelas">Criando tabelas</a></br>
 <a href="https://github.com/TatoSousa/Aulas/blob/main/Aulas-DDL.md#alterando-eou-modificando-tabelas">Alterando tabelas</a></br>
