@@ -44,6 +44,13 @@ UPDATE tbl_funcionarios SET status = 'INATIVO';
 UPDATE tbl_funcionarios SET uf = 'RJ' WHERE id_funcionario = 1;
 
 --Atualizando o salario em 10% dos funcionarios que estão presentes na tabela de funcionários promovidos;
+UPDATE tbl_funcionarios SET salario = salario * 1.1
+FROM tbl_funcionarios_promovidos
+WHERE tbl_funcionarios_promovidos.id_funcionario = tbl_funcionarios.id_funcionario;
+--ou
+UPDATE tbl_funcionarios SET salario = salario * 1.1
+WHERE id_funcionario IN (SELECT id_funcionario
+                           FROM tbl_funcionarios_promovidos.id_funcionario);
 
 ```
 
