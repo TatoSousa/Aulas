@@ -20,6 +20,19 @@ Abaixo está uma representação basica de cada comando pertencente ao grupo de 
 
 ### Inserindo
 
+--Sintaxe básica do comando INSERT:
+INSERT INTO tbl_estados (uf, nome_estado) VALUES ('SP', 'São Paulo');
+
+--Vários registro com um único comando de INSERT:
+INSERT INTO tbl_estados (uf, nome_estado) VALUES ('RJ', 'Rio de Janeiro'),
+                                                 ('MG', 'Minas Gerais'),
+                                                 ('ES', 'Espirito Santo');
+
+--Inserindo a partir de outra tabela
+INSERT INTO tbl_estados (uf, nome_estado)
+SELECT UF, nome_estado FROM tbl_estados_regiao_sul;
+
+
 ### Alterando
 
 ### Excluindo
