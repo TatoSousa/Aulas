@@ -36,9 +36,24 @@ SELECT UF, nome_estado FROM tbl_estados_regiao_sul;
 
 ### Alterando
 
+```sql
+--Atualizando o status de todos os funcionarios para inativo
+UPDATE tbl_funcionarios SET status = 'INATIVO';
+
+--Atualizando a uf do funcionario com id_funcionario igual a 1 para RJ
+UPDATE tbl_funcionarios SET uf = 'RJ' WHERE id_funcionario = 1;
+
+--Atualizando o salario em 10% dos funcionarios que estão presentes na tabela de funcionários promovidos;
+
+```
+
 ### Excluindo
+```sql
+```
 
 ### Mesclando
+```sql
+```
 
 ### Perguntas e respostas
 <details>
