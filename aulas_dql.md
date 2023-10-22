@@ -81,11 +81,11 @@ Vou chamar o resultado dos SELECTs de conjunto para melhorar o entendimento:
 Exemplo: A empresa em que trabalhamos adquiriu uma concorrente, e para isso é necessário atualizar a base de dados de clientes, unindo as informações de ambos os sistemas. Podemos fazer das seguintes maneiras estas validações:
 
 ```sql
---Selecionando todas os clientes das tabelas, inclusive os repetidos
+--Selecionando todas os clientes das tabelas, REMOVENDO os repetidos
 SELECT nome, cpf FROM clientes_empresa_x UNION
 SELECT nome, cpf FROM clientes_empresa_y;
 
---Selecionando todas os clientes das tabelas, REMOVENDO os repetidos
+--Selecionando todas os clientes das tabelas, inclusive os repetidos
 SELECT nome, cpf FROM clientes_empresa_x UNION ALL
 SELECT nome, cpf FROM clientes_empresa_y;
 
